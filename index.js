@@ -1,12 +1,17 @@
 'use strict';
 
 var Zip = require('adm-zip');
+var isOoxml = require('is-ooxml');
 
 var XLSX = /PartName\=\"\/xl/;
 var DOCX = /PartName\=\"\/word/;
 var PPTX = /PartName\=\"\/ppt/;
 
 module.exports = function(buffer) {
+  if (!isOoxml(buffer)) {
+    return null;
+  }
+  
   var zip = new Zip(buffer);
   var entries = zip.getEntries();
   var type;

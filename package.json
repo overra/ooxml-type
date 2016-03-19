@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/overra/ooxml-type#readme",
   "dependencies": {
-    "adm-zip": "^0.4.7"
+    "adm-zip": "^0.4.7",
+    "is-ooxml": "0.0.1"
   }
 }

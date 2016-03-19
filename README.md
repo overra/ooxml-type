@@ -24,4 +24,8 @@ console.log(ooxmlType(file));
 file = fs.readFileSync('./pptx.pptx');
 console.log(ooxmlType(file));
 // > pptx
+
+file = fs.readFileSync('./pdf.pdf');
+console.log(ooxmlType(file));
+// > null
 ```
